@@ -1,24 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import { AppHeader } from './AppHeader.jsx';
+import { MainPage } from './MainPage.jsx';
+import { ModalForm } from './ModalForm.jsx';
 
 function App() {
+  const [isModalFormVisible, setModalFormVisibility] = useState(false);
+  const setModalFormVisible = () =>{
+    setModalFormVisibility(true);
+  }
+  const setModalFormInVisible = () =>{
+    setModalFormVisibility(false);
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AppHeader />
+      <MainPage isModalFormVisible = {isModalFormVisible} setModalFormVisible = {setModalFormVisible}/>
+      {isModalFormVisible && <ModalForm setModalFormInVisible = {setModalFormInVisible}/>}
     </div>
   );
 }

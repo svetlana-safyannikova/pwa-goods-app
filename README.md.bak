@@ -1,0 +1,16 @@
+# ui
+
+Monorepo for portal components
+
+
+##Demo (Storybook)
+
+https://cctv.gitlab.netris.ru/ui
+
+##JS API Docs
+
+https://cctv.gitlab.netris.ru/ui/js-api/index.html
+
+##JS API player demo
+
+https://cctv.gitlab.netris.ru/ui/js-api/demo.html
